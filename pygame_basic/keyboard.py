@@ -19,6 +19,9 @@ while play:
 
         # 키보드 입력 이벤트
         if event.type == pygame.KEYDOWN:
-            print(event.key)
+            print(chr(event.key), '누름')
+        # 키보드 입력해제 이벤트
+        if event.type == pygame.KEYUP:
+            print(chr(event.key), '뗌')
 
 pygame.quit()
