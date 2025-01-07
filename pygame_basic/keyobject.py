@@ -8,6 +8,8 @@ pygame.init()
 background = pygame.display.set_mode((480, 360))
 # 게임 창 이름 설정
 pygame.display.set_caption('실행')
+# 시간
+clock = pygame.time.Clock()
 
 # 이동하는 오브젝트 만들기
 # 초기 좌표 설정
@@ -21,6 +23,9 @@ to_y = 0
 play = True
 
 while play:
+    # 1초에 몇 번 while문 실행하는지 설정
+    deltaTime = pygame.time.Clock().tick(300)
+    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             play = False
