@@ -25,6 +25,7 @@ while play:
         if event.type == pygame.QUIT:
             play = False
 
+        # 키 입력
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_w:
                 to_y = -1
@@ -34,6 +35,17 @@ while play:
                 to_y = 1
             elif event.key == pygame.K_d:
                 to_x = 1
+
+        # 키 입력 해제
+        if event.type == pygame.KEYUP:
+            if event.key == pygame.K_w:
+                to_y = 0
+            elif event.key == pygame.K_a:
+                to_x = 0
+            elif event.key == pygame.K_s:
+                to_y = 0
+            elif event.key == pygame.K_d:
+                to_x = 0                
 
     # 좌표 변경
     x_pos += to_x
