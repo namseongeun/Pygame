@@ -19,7 +19,15 @@ while play:
 
         # 키보드 입력 이벤트
         if event.type == pygame.KEYDOWN:
-            print(chr(event.key), '누름')
+            if event.key == pygame.K_w:
+                print('up')
+            if event.key == pygame.K_a:
+                print('left')
+            if event.key == pygame.K_s:
+                print('down')
+            if event.key == pygame.K_d:
+                print('right')
+            
         # 키보드 입력해제 이벤트
         if event.type == pygame.KEYUP:
             print(chr(event.key), '뗌')
