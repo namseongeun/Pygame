@@ -60,6 +60,18 @@ while play:
             x_pos, y_pos = pygame.mouse.get_pos()
             pygame.draw.circle(background, (255,255,255), (x_pos,y_pos),5)
 
+        # 마우스 클릭
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            # 1: 왼쪽, 2: 휠, 3: 오른쪽, 4: 휠업, 5: 휠다운
+            
+            # 왼쪽 클릭하면 배경을 검정으로 채우기
+            if event.button == 1:
+                background.fill((0,0,0))
+
+        # 마우스 클릭해제
+        if event.type == pygame.MOUSEBUTTONUP:
+            pass
+
     # 좌표 변경
     x_pos += to_x
     y_pos += to_y
