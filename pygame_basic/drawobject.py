@@ -30,6 +30,23 @@ while play:
     for j in range(0, 360, 30):
         pygame.draw.line(background, (0,0,0), (0,j), (480,j))
 
+    # 원 그리기
+    # pygame.draw.circle(화면, 색, 중심좌표, 반지름 , 선굵기)
+    # pygame.draw.circle(background, (0,255,0), (x,y), 50)
+    pygame.draw.circle(background, (0,255,0), (x,y), 50, 5)
+
+
+    # 사각형 그리기
+    # pygame.draw.rect(화면, 색, 위치와 크기(좌상단 좌표와 가로세로 길이), 선굵기)
+    # pygame.draw.rect(background, (0,0,255), (x-50,y-25,100,50))
+    pygame.draw.rect(background, (0,0,255), (x-50,y-25,100,50), 5)
+
+    # 타원 그리기
+    # pygame.draw.ellipse()
+
+    # 다각형 그리기
+    # pygame.draw.polygon()
+
 
     pygame.display.update()
 
