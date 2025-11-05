@@ -24,6 +24,12 @@ while play:
     pygame.draw.line(background, (0,0,0), (x,0), (x, y*2))
     pygame.draw.line(background, (0,0,0), (0,y), (x*2, y))
 
+    # 반복문을 사용해서 격자 그리기
+    for i in range(0, 480, 30): 
+        pygame.draw.line(background, (0,0,0), (i,0), (i,360))
+    for j in range(0, 360, 30):
+        pygame.draw.line(background, (0,0,0), (0,j), (480,j))
+
 
     pygame.display.update()
 
